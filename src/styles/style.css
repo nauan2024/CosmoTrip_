@@ -23,6 +23,12 @@ header {
     /* Altera a cor de texto */
     text-decoration: none;
     font-family: var(--font-title);
+    transition: 0.3s;
+}
+
+.nav-header-item:hover {
+    color:#454545 ;
+
 }
 
 .active {
@@ -39,6 +45,15 @@ header {
     text-decoration: none;
     font-weight: bold;
     font-family: var(--font-title);
+    transition: 0.3s;
+}
+
+.btn-header:hover {
+    background-color: #a10073;
+}
+
+.menu-mobile {
+    display: none;
 }
 
 main {
@@ -57,8 +72,18 @@ main {
 
 main .section-indicator {
     align-self: self-start;
+    color: var();
 }
 
+.img_main {
+
+    transition: 1s;
+
+}
+
+.img_main:hover {
+    transform: rotate(180deg);
+}
 .section-indicator {
     display: flex;
     gap: 8px;
@@ -162,6 +187,13 @@ main p {
     width: 364px;
     background-color: var(--color-l-black);
     border-radius: 20px;
+    transition: 0.3s;
+}
+
+.card-destiny:hover {
+    transform: translate(0px, -10px);
+    box-shadow: 0px 0px 6px 0px var(--color-white);
+
 }
 
 .card-destiny-informations {
@@ -257,6 +289,12 @@ main p {
     padding: 80px 35px;
     text-align: center;
     border-radius: 20px;
+    transition: 0.3s;
+}
+
+.card-highlights:hover {
+    transform: translate(0px, -10px);
+    box-shadow: 1px 0px 5px 0px var(--color-pink);
 }
 
 .card-highlights h3{
@@ -321,7 +359,7 @@ main p {
 }
 
 .faq-item{
-     display: flex;
+    display: flex;
     width: 1138px;
     padding: 30px;
     background-color: var(--color-black);
@@ -388,6 +426,297 @@ footer {
     text-decoration: none;
     color: var(--color-grey);
     font-family: var(--font-body);
-    font-size: var(--font-body4);
+    font-size: var(--font-body2);
 
+}
+
+.footer-updates {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-updates h2 {
+    font-size: var(--font-body1);
+    font-family: var(--font-body);
+    font-weight: 400;
+    width: 198px;
+}
+
+.footer-updates form {
+    display: flex;
+    justify-content: space-between;
+    width: 385px;
+    border-bottom: 0.5px solid var(--color-d-gray);
+    padding-bottom: 16px;
+}
+
+.footer-updates form input {
+    padding: 12px 0px;
+    background-color: transparent;
+    color: var(--color-white);
+    font-size: var(--font-body2);
+    outline: none;
+
+}
+
+.footer-updates form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-pink);
+    border-radius: 100%;
+    padding: 11px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-updates form button:hover {
+    background-color: #a10073;
+}
+
+/* sempre lá embaixo */
+
+@media (max-width:884px) {
+    main {
+        gap: 10px;
+    }
+    .menu-mobile {
+    display: none;
+}
+    h1 {
+        font-size: var(--font-h2);
+        width: 450px;
+    }
+    .illustration-hero {
+        width: 350px;
+    }
+
+    .card-destiny {
+        width: 300px;
+    }
+
+    .container-reviews {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) ;    
+        gap: 10px;
+    }
+
+    .destiny-reviews p {
+        font-size: 12px;
+    }
+
+    .faq-item {
+        width: 850px;
+    }
+
+
+    .logo-footer {
+        display: none;
+        /* faz com que o elemento não exista */
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* --- Header --- */
+    header {
+        flex-direction: column;
+        gap: 25px;
+        padding: 20px 0;
+    }
+
+    .nav-header ul {
+        gap: 24px;
+        flex-wrap: wrap;
+        /* permite que os elementos quebrem por uma ou mais linhas */
+        justify-content: center;
+    }
+
+    .menu-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+
+    .menu-mobile span {
+       padding: 2px 15px;
+       background-color: var(--color-pink);
+    }
+
+    .nav-header,.container-btn-header {
+        display: none;
+    }
+
+    /* --- Main (Hero) --- */
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .content-main {
+        flex-direction: column;
+        width: 430px;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+    }
+
+    h1 {
+        font-size: var(--font-h2);
+        width: 100%;
+    }
+
+    main p {
+        width: 100%;
+    }
+
+    .illustration-hero {
+        width: 90%;
+        height: auto;
+    }
+
+    .container-btn-main {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-secondary {
+        justify-content: center;
+    }
+
+    .btn-primary {
+        justify-content: center;
+    }
+
+    /* --- Estatísticas --- */
+    .section-statistics {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .statistics-number {
+        font-size: var(--font-h3);
+    }
+
+    .statistics-description {
+        font-size: var(--font-body3);
+    }
+
+    /* --- Destinos --- */
+    .content-destiny {
+        padding: 0 5px;
+    }
+
+    .content-destiny p {
+        width: 100%;
+    }
+
+    .cards-destiny-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-destiny {
+        width: 400px;
+       
+    }
+
+    .destiny-reviews p {
+        font-size: 12px;
+    }
+
+    /* --- Destaques --- */
+    .container-card-highlights {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-highlights {
+        width: 390px;
+        padding: 40px 25px;
+    }
+
+    /* --- Depoimentos --- */
+    .section-testimonials {
+        padding: 40px 10px;
+    }
+
+    .container-reviews {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card-review {
+        padding: 24px;
+    }
+
+    .card-review p {
+        width: 100%;
+    }
+
+    /* --- FAQ --- */
+    .section-faq {
+        padding: 40px 0;
+    }
+
+    .faq-item {
+        width: 430px;
+        padding: 20px;
+    }
+
+    .faq-item h3 {
+        font-size: var(--font-body3);
+    }
+
+    /* --- Footer --- */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .logo-footer {
+        display: none;
+    }
+
+    .footer-navigation {
+        width: 430px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .footer-navigation-item h2 {
+        font-size: var(--font-h4);
+    }
+
+    .footer-nav ul li a {
+        font-size: var(--font-body3);
+    }
+
+    .footer-updates {
+        width: 430px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-updates h2 {
+        font-size: var(--font-h4);
+        width: 430px;
+    }
+
+    .footer-updates form {
+        width: 430px;
+        max-width: 385px;
+    }
+
+    .footer-updates form input {
+        width: 430px;
+        text-align: left;
+    }
 }
